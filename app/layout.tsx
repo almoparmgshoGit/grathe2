@@ -19,8 +19,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "About Us | Al-Noor Academy — من نحن",
-  description: "Empowering learners to achieve their full potential through accessible, high-quality education.",
+  title: "أكاديمية غراس - البرنامج الشرعي العام | Al-Ghiras Academy",
+  description: "أكاديمية غراس لتعلم العلوم الشرعية وفق منهجية أصيلة وميسرة لجميع طلاب العلم.",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -34,7 +39,7 @@ export default function RootLayout({
       dir="rtl"
       className={`${cairo.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#f7f8f4] text-[#18322f] font-sans selection:bg-[#0f766e] selection:text-white">
+      <body className="min-h-full flex flex-col bg-[#f7f8f4] dark:bg-[#09111e] text-[#18322f] dark:text-slate-100 font-sans selection:bg-[#0f766e] selection:text-white transition-colors duration-300">
         {children}
       </body>
     </html>
