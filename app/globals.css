@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-sans: var(--font-cairo), "Cairo", "Segoe UI", "Noto Sans Arabic", system-ui, -apple-system, sans-serif;
+  --background: #f7f8f4;
+  --foreground: #18322f;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand-primary: #1e3a5f;
+  --color-brand-hover: #15294a;
+  --color-brand-indigo: #3a4778;
+  --color-teal-deepest: #063b39;
+  --color-teal-primary: #0f766e;
+  --color-teal-text: #18322f;
+  --color-accent-gold: #e09f3e;
+  --color-accent-brick: #bc4749;
+  --color-accent-soft: #f5cb5c;
+  --color-accent-emerald: #15825f;
+  --color-accent-sage: #44928a;
+  --color-surface-page: #f7f8f4;
+  --color-surface-card: #ffffff;
+  --color-surface-subtle: #fbfbfc;
+  --font-sans: var(--font-cairo), "Cairo", "Segoe UI", "Noto Sans Arabic", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes floatShape {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(22px, -18px, 0) rotate(8deg); }
+  100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+}
+
+.hero-gradient {
+  background: linear-gradient(125deg, #063b39 0%, #0f766e 38%, #e09f3e 70%, #bc4749 100%);
+  background-size: 220% 220%;
+  animation: gradientShift 14s ease infinite;
+}
+
+.float-shape {
+  animation: floatShape 9s ease-in-out infinite;
+}
+
+.card-shadow {
+  box-shadow: 0 24px 70px rgba(24, 50, 47, 0.12);
+}
+
+.field-focus:focus-within {
+  border-color: #1e3a5f;
+  box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
 }
