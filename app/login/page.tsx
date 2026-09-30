@@ -146,7 +146,7 @@ export default function LoginPage() {
 
       {/* Main Login Card / Grid */}
       <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 flex items-center justify-center">
-        <div className="w-full grid grid-cols-1 md:grid-cols-12 bg-white dark:bg-[#111c2e] rounded-[28px] card-shadow overflow-hidden border border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div className="w-full grid grid-cols-1 md:grid-cols-12 bg-white dark:bg-[#111c2e] rounded-2xl card-shadow overflow-hidden border border-slate-200 dark:border-slate-800 transition-colors duration-300">
 
           {/* Left Hero / Branding Panel (5 cols) */}
           <div className="hidden md:flex md:col-span-5 hero-gradient p-10 text-white flex-col justify-between relative overflow-hidden">

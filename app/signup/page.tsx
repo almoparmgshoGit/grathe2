@@ -203,7 +203,7 @@ export default function SignupPage() {
 
       {/* Main Signup Form Container */}
       <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 flex items-center justify-center">
-        <div className="w-full bg-white dark:bg-[#111c2e] rounded-[28px] card-shadow p-8 sm:p-12 border border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div className="w-full bg-white dark:bg-[#111c2e] rounded-2xl card-shadow p-8 sm:p-12 border border-slate-200 dark:border-slate-800 transition-colors duration-300">
           {isSuccess ? (
             <div className="text-center py-16 space-y-4">
               <div className="w-20 h-20 mx-auto rounded-full bg-[#15825f]/10 text-[#15825f] flex items-center justify-center animate-bounce">

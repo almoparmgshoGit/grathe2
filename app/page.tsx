@@ -36,7 +36,6 @@ export default function AboutUsPage() {
   const [activeTimeline, setActiveTimeline] = useState(0);
 
   useEffect(() => {
-    // Check system preference or localStorage
     const isDark = localStorage.getItem("ghiras_theme") === "dark";
     setDarkMode(isDark);
     if (isDark) {
@@ -114,7 +113,7 @@ export default function AboutUsPage() {
           },
           {
             icon: <Users className="w-6 h-6 text-[#3a4778] dark:text-indigo-400" />,
-            title: "العناية بالطالب",
+            title: "العناية بالط الطالب",
             desc: "مواكبة مسيرة الطالب العلمية والإجابة عن تساؤلاته وتوجيهه بالشكل الأمثل.",
           },
           {
@@ -363,12 +362,10 @@ export default function AboutUsPage() {
           </nav>
 
           <div className="flex items-center gap-3">
-            {/* Dark Mode Toggle Button */}
             <button
               onClick={toggleDarkMode}
               className="p-2 rounded-sm border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all shadow-sm"
               aria-label="Toggle Dark Mode"
-              title={darkMode ? "الوضع الفاتح" : "الوضع الداكن"}
             >
               {darkMode ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-[#1e3a5f]" />}
             </button>
@@ -380,7 +377,6 @@ export default function AboutUsPage() {
               <Globe className="w-3.5 h-3.5 text-[#0f766e] dark:text-teal-400" />
               {lang === "ar" ? "English" : "العربية"}
             </button>
-
             <a
               href="/login"
               className="px-3 py-2 rounded-sm border border-[#1e3a5f] dark:border-slate-600 text-[#1e3a5f] dark:text-slate-200 text-xs font-semibold hover:bg-[#1e3a5f] hover:text-white dark:hover:bg-slate-700 transition-all flex items-center gap-1.5"
@@ -443,8 +439,8 @@ export default function AboutUsPage() {
 
             {/* Hero Image Placeholder */}
             <div className="lg:col-span-5">
-              <div className="relative rounded-[28px] overflow-hidden card-shadow border border-white/20 bg-white/10 p-6 backdrop-blur-md text-center">
-                <div className="w-full h-[320px] rounded-[22px] bg-white/5 border-2 border-dashed border-white/30 flex flex-col items-center justify-center text-white/70 gap-3 mb-4">
+              <div className="relative rounded-2xl overflow-hidden card-shadow border border-white/20 bg-white/10 p-6 backdrop-blur-md text-center">
+                <div className="w-full h-[320px] rounded-xl bg-white/5 border-2 border-dashed border-white/30 flex flex-col items-center justify-center text-white/70 gap-3 mb-4">
                   <Camera className="w-12 h-12 text-white/50" />
                   <span className="text-sm font-medium">
                     {lang === "ar" ? "مساحة مخصصة للصورة الترويجية (ارفق صورتك هنا)" : "Image Placeholder (Drop your image here)"}
@@ -485,7 +481,7 @@ export default function AboutUsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="rounded-[28px] p-8 sm:p-10 bg-[#f7f8f4] dark:bg-[#17253d] border border-slate-200 dark:border-slate-800 card-shadow relative overflow-hidden group hover:border-[#0f766e] dark:hover:border-teal-400 transition-all">
+            <div className="rounded-2xl p-8 sm:p-10 bg-[#f7f8f4] dark:bg-[#17253d] border border-slate-200 dark:border-slate-800 card-shadow relative overflow-hidden group hover:border-[#0f766e] dark:hover:border-teal-400 transition-all">
               <div className="w-14 h-14 rounded-full bg-[#0f766e]/10 dark:bg-teal-900/40 flex items-center justify-center text-[#0f766e] dark:text-teal-400 mb-6 group-hover:bg-[#0f766e] group-hover:text-white transition-all">
                 <Target className="w-7 h-7" />
               </div>
@@ -501,7 +497,7 @@ export default function AboutUsPage() {
               </div>
             </div>
 
-            <div className="rounded-[28px] p-8 sm:p-10 bg-[#f7f8f4] dark:bg-[#17253d] border border-slate-200 dark:border-slate-800 card-shadow relative overflow-hidden group hover:border-[#1e3a5f] dark:hover:border-indigo-400 transition-all">
+            <div className="rounded-2xl p-8 sm:p-10 bg-[#f7f8f4] dark:bg-[#17253d] border border-slate-200 dark:border-slate-800 card-shadow relative overflow-hidden group hover:border-[#1e3a5f] dark:hover:border-indigo-400 transition-all">
               <div className="w-14 h-14 rounded-full bg-[#1e3a5f]/10 dark:bg-indigo-900/40 flex items-center justify-center text-[#1e3a5f] dark:text-indigo-400 mb-6 group-hover:bg-[#1e3a5f] group-hover:text-white transition-all">
                 <Compass className="w-7 h-7" />
               </div>
@@ -539,9 +535,9 @@ export default function AboutUsPage() {
             {t.values.items.map((val, idx) => (
               <div
                 key={idx}
-                className="bg-white dark:bg-[#111c2e] rounded-sm p-6 border border-slate-200 dark:border-slate-800 card-shadow hover:-translate-y-1 transition-all duration-300"
+                className="bg-white dark:bg-[#111c2e] rounded-xl p-6 border border-slate-200 dark:border-slate-800 card-shadow hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-sm bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 flex items-center justify-center mb-4">
                   {val.icon}
                 </div>
                 <h3 className="text-lg font-bold text-[#18322f] dark:text-white mb-2">
@@ -576,7 +572,7 @@ export default function AboutUsPage() {
               <div
                 key={idx}
                 onClick={() => setActiveTimeline(idx)}
-                className={`cursor-pointer rounded-[28px] p-6 transition-all border ${
+                className={`cursor-pointer rounded-2xl p-6 transition-all border ${
                   activeTimeline === idx
                     ? "bg-[#1e3a5f] dark:bg-teal-800 text-white border-[#1e3a5f] dark:border-teal-700 card-shadow scale-[1.02]"
                     : "bg-[#f7f8f4] dark:bg-[#17253d] text-[#18322f] dark:text-slate-200 border-slate-200 dark:border-slate-800 hover:border-[#1e3a5f]"
@@ -621,7 +617,7 @@ export default function AboutUsPage() {
             {t.team.members.map((member, idx) => (
               <div
                 key={idx}
-                className="bg-white dark:bg-[#111c2e] rounded-[28px] overflow-hidden border border-slate-200 dark:border-slate-800 card-shadow hover:-translate-y-2 transition-all duration-300 flex flex-col"
+                className="bg-white dark:bg-[#111c2e] rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 card-shadow hover:-translate-y-2 transition-all duration-300 flex flex-col"
               >
                 {/* Faculty Photo Placeholder */}
                 <div className="h-64 bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 flex flex-col items-center justify-center text-slate-400 gap-2 relative">
@@ -691,7 +687,7 @@ export default function AboutUsPage() {
             {t.stats.items.map((stat, idx) => (
               <div
                 key={idx}
-                className="rounded-[28px] p-8 bg-[#f7f8f4] dark:bg-[#17253d] border border-slate-200 dark:border-slate-800 card-shadow text-center flex flex-col items-center justify-center hover:border-[#0f766e] dark:hover:border-teal-400 transition-all"
+                className="rounded-2xl p-8 bg-[#f7f8f4] dark:bg-[#17253d] border border-slate-200 dark:border-slate-800 card-shadow text-center flex flex-col items-center justify-center hover:border-[#0f766e] dark:hover:border-teal-400 transition-all"
               >
                 <div className="w-16 h-16 rounded-full bg-white dark:bg-slate-800 shadow-sm flex items-center justify-center mb-4">
                   {stat.icon}
